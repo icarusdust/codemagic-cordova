@@ -17,7 +17,7 @@ workflows:
       events:
         - tag
       tag_patterns:
-        - pattern: '*'
+        - pattern: 'release-*'
           include: true
     # cache:
     #   cache_paths:
