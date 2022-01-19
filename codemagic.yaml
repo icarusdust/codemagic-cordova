@@ -15,10 +15,9 @@ workflows:
     triggering:
       events:
         - tag
-      branch_patterns:
+      tag_patterns:
         - pattern: '*'
           include: true
-          source: true
     cache:
       cache_paths:
         - $FCI_BUILD_DIR/node_modules
