@@ -45,4 +45,4 @@ workflows:
         recipients:
           - nihal@nevercode.io
       slack:
-        channel: '#test_channel'
+        channel: '#test_channel, #test_channel2'
