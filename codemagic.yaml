@@ -12,6 +12,13 @@ workflows:
       xcode: 12.4
       node: 12
       npm: 6
+    triggering:
+      events:
+        - pull_request
+      branch_patterns:
+        - pattern: '*'
+          include: true
+          source: true
     cache:
       cache_paths:
         - $FCI_BUILD_DIR/node_modules
