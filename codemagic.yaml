@@ -18,9 +18,9 @@ workflows:
       tag_patterns:
         - pattern: 'release-*'
           include: true
-    cache:
-      cache_paths:
-        - $FCI_BUILD_DIR/node_modules
+#     cache:
+#       cache_paths:
+#         - $FCI_BUILD_DIR/node_modules
     scripts:
       - name: Install dependencies
         script: |
