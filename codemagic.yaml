@@ -12,12 +12,12 @@ workflows:
       xcode: 12.4
       node: 12
       npm: 6
-    triggering:
-      events:
-        - tag
-      tag_patterns:
-        - pattern: 'release-*'
-          include: false
+#     triggering:
+#       events:
+#         - tag
+#       tag_patterns:
+#         - pattern: 'release-*'
+#           include: false
 #     cache:
 #       cache_paths:
 #         - $FCI_BUILD_DIR/node_modules
