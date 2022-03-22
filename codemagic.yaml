@@ -70,7 +70,7 @@ workflows:
             echo 'Installing App Center CLI tools'
             npm install -g appcenter-cli
             echo "Find build artifacts"
-            apkPath=$(find build -name "*.apk" | head -1)
+            apkPath=platforms/android/app/build/outputs/apk/release/app-release.apk
             echo "Found apk at $apkPath"
 
             if [[ -z ${apkPath} ]]
