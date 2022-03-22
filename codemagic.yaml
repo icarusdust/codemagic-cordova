@@ -64,3 +64,25 @@ workflows:
           - nihal@nevercode.io
       slack:
         channel: '#test_channel,#test_channel2'
+      scripts:
+        - name: App Center
+          script: |
+            echo 'Installing App Center CLI tools'
+            npm install -g appcenter-cli
+            echo "Find build artifacts"
+            apkPath=$(find build -name "*.apk" | head -1)
+            echo "Found apk at $apkPath"
+
+            if [[ -z ${apkPath} ]]
+            then
+                echo "No apks were found, skip publishing to App Center"
+            else
+                echo "Publishing $apkPath to App Center"
+                appcenter distribute release \
+                    --group Collaborators \
+                    --file "${apkPath}" \
+                    --release-notes 'App submission via Codemagic' \
+                    --app <username_or_organization>/<application_identifier> \
+                    --token "${APP_CENTER_TOKEN}" \
+                    --quiet
+            fi
