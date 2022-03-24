@@ -83,7 +83,7 @@ workflows:
                     --group Collaborators \
                     --file "${apkPath}" \
                     --release-notes 'App submission via Codemagic' \
-                    --app <BLA_BLA>/<HH> \
+                    --app <Test_App>/<HH> \
                     --token "${APP_CENTER_TOKEN}" \
                     --quiet
             fi
