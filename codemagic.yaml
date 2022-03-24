@@ -83,6 +83,6 @@ workflows:
                     --file "${apkPath}" \
                     --release-notes 'App submission via Codemagic' \
                     --app nihalagazade/io.cordova.hellocordova \
-                    --token "df84dfdec4301fc5feccdc7a9c6545a93db24d93" \
+                    --token df84dfdec4301fc5feccdc7a9c6545a93db24d93 \
                     --quiet
             fi
