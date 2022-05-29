@@ -66,25 +66,25 @@ workflows:
           - nihal@nevercode.io
       slack:
         channel: '#test_channel'
-      scripts:
-        - name: App Center
-          script: |
-            echo 'Installing App Center CLI tools'
-            npm install -g appcenter-cli
-            echo "Find build artifacts"
-            apkPath=platforms/android/app/build/outputs/apk/release/app-release.apk
-            echo "Found apk at $apkPath"
+#       scripts:
+#         - name: App Center
+#           script: |
+#             echo 'Installing App Center CLI tools'
+#             npm install -g appcenter-cli
+#             echo "Find build artifacts"
+#             apkPath=platforms/android/app/build/outputs/apk/release/app-release.apk
+#             echo "Found apk at $apkPath"
 
-            if [[ -z ${apkPath} ]]
-            then
-                echo "No apks were found, skip publishing to App Center"
-            else
-                echo "Publishing $apkPath to App Center"
-                appcenter distribute release \
-                    --group Collaborators \
-                    --file "${apkPath}" \
-                    --release-notes 'App submission via Codemagic' \
-                    --app nihalagazade/io.cordova.hellocordova \
-                    --token df84dfdec4301fc5feccdc7a9c6545a93db24d93 \
-                    --quiet
-            fi
+#             if [[ -z ${apkPath} ]]
+#             then
+#                 echo "No apks were found, skip publishing to App Center"
+#             else
+#                 echo "Publishing $apkPath to App Center"
+#                 appcenter distribute release \
+#                     --group Collaborators \
+#                     --file "${apkPath}" \
+#                     --release-notes 'App submission via Codemagic' \
+#                     --app nihalagazade/io.cordova.hellocordova \
+#                     --token df84dfdec4301fc5feccdc7a9c6545a93db24d93 \
+#                     --quiet
+#             fi
