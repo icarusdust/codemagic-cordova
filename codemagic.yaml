@@ -16,12 +16,12 @@ workflows:
       node: 12
       npm: 6
 
-    triggering:
-      events:
-        - tag
-      tag_patterns:
-        - pattern: 'release-*'
-          include: true
+#     triggering:
+#       events:
+#         - tag
+#       tag_patterns:
+#         - pattern: 'release-*'
+#           include: true
     # cache:
     #   cache_paths:
     #     - $FCI_BUILD_DIR/node_modules
