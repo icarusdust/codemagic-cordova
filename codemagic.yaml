@@ -1,6 +1,6 @@
 workflows:
   android-workflow:
-    name: Android Cordova workflow
+    name: ios-staging-main
     instance_type: mac_pro
     environment:
       groups:
@@ -40,10 +40,6 @@ workflows:
       - name: Install dependencies
         script: |
           npm install
-          npm ci
-          cvm install 9.0.0
-          cvm use 9.0.0   
-          echo $BUILD_NUMBER
       - name: Add Android platform
         script: |
           set -x
