@@ -1,7 +1,7 @@
 workflows:
   android-workflow:
     name: ios-staging-main
-    instance_type: mac_pro
+    instance_type: linux_x2
     environment:
       groups:
         - perfecto_credentials
@@ -15,6 +15,7 @@ workflows:
       xcode: 12.4
       node: 12
       npm: 6
+      ruby: 3.0.3
 
 #     triggering:
 #       events:
